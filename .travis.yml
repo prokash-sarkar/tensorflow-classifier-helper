@@ -5,7 +5,7 @@ android:
     - build-tools-27.0.3
     - android-27
 
-dk:
+jdk:
   - oraclejdk8
 
 script: ./gradlew clean build --info --stacktrace
