@@ -1,0 +1,32 @@
+language: android
+android:
+  components:
+    - tools
+    - build-tools-27.0.3
+    - android-27
+
+dk:
+  - oraclejdk8
+
+script: ./gradlew clean build --info --stacktrace
+
+sudo: false
+
+env:
+  global:
+    - GRADLE_OPTS="-Xms128m"
+
+env:
+  global:
+    - GRADLE_OPTS="-Xms128m"
+
+cache:
+  directories:
+  - $HOME/.gradle
+  - $HOME/.m2
+
+before_install:
+        - chmod +x gradlew
+branches:
+        only:
+                - master
